@@ -1,0 +1,9 @@
+<h1>Add your Picture</h1>
+
+<%= form_for @picture do |f| %>
+
+	<p><%= f.label :title %><%= f.text_field :title %></p>
+	<p><%= f.label :caption %><%= f.text_field :caption %></p>
+	<p><%= f.label :url %><%= f.text_field :url %></p>
+	<%= submit_tag("Submit")%>
+<% end %>
