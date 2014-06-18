@@ -1,20 +1,18 @@
-<h1 class="text-center">Hit me with your Best Shot</h1>
-<h2>...aka your best photo</h2>
+
 <h3><%= link_to "New Picture", new_picture_path%></h3> 
  
 <% @pictures.each do |picture| %>
-<div class="panel">
-<%= link_to "Show", picture_url(picture.id) %>
-	<h3><%= picture.title  %></h3>
-	<h4><%= picture.caption %> </h4>
-	<h4><img src="<%= picture.url %>"></h4>
-	<p><%= link_to "Edit", edit_picture_path(picture.id) %>| <%= link_to "Delete", picture_url(picture.id),  method: "delete" %></p>
-</div>
+	
+	<div class="picture_card">
+		<%= link_to picture_url(picture.id) do %>
+			<h3><%= picture.title  %></h3>
+			<h4><img src="<%= picture.url %>"></h4>
+			<h4><%= picture.caption %> </h4>
+			<div class="pull-right">
+				<p><%= link_to "Edit", edit_picture_path(picture.id) %>| <%= link_to "Delete", picture_url(picture.id),  method: "delete" %></p>
+			</div>
+		<% end %>	
+	</div>	
+	
 <% end %>
-
-
-
-
-
-
 
