@@ -26,7 +26,7 @@ class PicturesController < ApplicationController
 	def update
 		@picture = Picture.find(params[:id])
 		@picture.update_attributes(picture_params)
-		redirect_to roots_path
+		redirect_to root_path
 	end
 	
 	private
