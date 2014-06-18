@@ -1,4 +1,17 @@
 <h1>Hit me with your Best Shot</h1>
 <h2>...aka your best photo</h2>
-<h3><%= link_to "New Picture", new_picture_path%></h3>
+<h3><%= link_to "New Picture", new_picture_path%></h3> 
+ 
+<% @pictures.each do |picture| %>
+	<h3><%= picture.title  %></h3>
+	<h4><%= picture.caption %> </h4>
+	<h4><%= picture.url %></h4>
+	<p><%= link_to "Edit", edit_picture_path(picture.id) %>| <%= link_to "Delete", picture_url(picture.id),  method: :delete %></p>
+<% end %>
+
+
+
+
+
+
 
