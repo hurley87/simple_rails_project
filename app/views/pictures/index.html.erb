@@ -1,8 +1,5 @@
-
- 
- 
 <% @pictures.each do |picture| %>
-			<%= link_to picture_url(picture.id) do %><div class="image_card" style="background-image: url(<%= picture.url %>)">what what</div>
+			<%= link_to picture_url(picture.id) do %><div class="image_card" style="background-image: url(<%= picture.url %>)"><h2><%= picture.title %></h2></div>
 			<% end %>	
 <% end %>
 

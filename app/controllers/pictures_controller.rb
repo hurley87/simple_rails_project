@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
 	def index
-		@pictures = Picture.all
+		@pictures = Picture.newest_five
 	end
 
 	def new

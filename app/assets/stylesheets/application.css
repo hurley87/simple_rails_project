@@ -33,6 +33,12 @@ body {
 	float: left;
 }
 
+h2 {
+	font-weight: 100;
+	text-shadow: 3px 3px black;
+	letter-spacing: 4px;
+}
+
 a {
 	font-weight: 200;
 	color: white;
